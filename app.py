@@ -3,6 +3,7 @@ from fastapi.responses import HTMLResponse, PlainTextResponse
 import datetime
 from pydantic import BaseModel
 from prometheus_client import Counter, generate_latest, CONTENT_TYPE_LATEST
+import time
 
 app = FastAPI()
 
