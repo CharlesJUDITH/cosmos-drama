@@ -39,6 +39,17 @@ import threading
 counter_thread = threading.Thread(target=update_counters)
 counter_thread.start()
 
+@app.post("/reset_counters")
+def reset_counters():
+    global days_without_issues, days_without_drama
+
+    days_without_issues = 0
+    days_without_drama = 0
+    days_without_issues_counter._value.set(0)
+    days_without_drama_counter._value.set(0)
+
+    return {"message": "Days without issues and drama counters have been reset to 0"}
+
 @app.get("/", response_class=HTMLResponse)
 def read_root():
     global days_without_issues, days_without_drama
