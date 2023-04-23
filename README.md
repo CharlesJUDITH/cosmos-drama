@@ -57,11 +57,11 @@ Visit the application in your browser at http://localhost:8000/ to see the days 
 You can push the days without drama or issues using the /push_drama and /push_issues API endpoints, respectively. Send a POST request with a JSON payload containing the number of days you want to push:
 
 ```
-curl -X POST "http://localhost:8000/push_drama" -H "Content-Type: application/json" -d '{"days": 3}'
+curl -X POST "http://localhost:8000/push_drama" -H "Content-Type: application/json" -d '{"days": 1}'
 ```
 
 ```
-curl -X POST "http://localhost:8000/push_issues" -H "Content-Type: application/json" -d '{"days": 3}'
+curl -X POST "http://localhost:8000/push_issues" -H "Content-Type: application/json" -d '{"days": 1}'
 ```
 
 Prometheus metrics are exposed at http://localhost:8000/metrics
